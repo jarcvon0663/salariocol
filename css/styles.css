@@ -120,7 +120,7 @@ body {
 }
 
 .title--active {
-    color: var(--gold1);
+    color: yellow;
     font-weight: 500;
 }
 
