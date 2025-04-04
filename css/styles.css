@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --gold1: #001cbd;
+    --gold2: #002396;
+    --gray: #ffffff80;
+    --gray2: #f7d9d990;
+    --black1: #1A1B1F;
+    --black2: #30353B;
+    --shadow: 0 8px 8px;
+    --color_shadow: #00000033;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 100px 0;
+    height: auto;
+}
+
+.container--modifier {
+    width: 60%;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);
+}
+
+.nav__hero {
+    color: #fff;
+    height: 70px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: inherit;
+    padding: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 10px;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+    background-color: transparent; /* por si acaso */
+}
+
+.logo__name {
+    font-size: 24px;
+}
+
+.link {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    font-weight: 300;
+    padding: 10px;
+}
+
+.link--active {
+    color: var(--gold1);
+    font-weight: 700;
+}
+
+.point {
+    color: var(--gold1);
+}
+
+.hero__main {
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.mockup {
+    object-fit: cover;
+    width: 35%;
+    height: auto;
+    margin-right: 5%;
+}
+
+.hero__textos {
+    width: 48%;
+}
+
+.hero__textos p {
+    width: 100%;
+    text-align: center;
+}
+
+.title {
+    font-size: 38px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.title--active {
+    color: var(--gold1);
+    font-weight: 500;
+}
+
+.copy {
+    font-size: 16px;
+    color: white;
+    margin: 15px 0;
+}
+
+.copy__active {
+    font-weight: 700;
+}
+
+.botonesTienda {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px; /* Mejora el espaciado entre botones */
+    flex-wrap: wrap; /* Responsivo */
+}
+
+.botonTienda img {
+    width: 250px;
+    height: auto;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 900px) {
+    .mockup {
+        width: 60%;
+        height: auto;
+        margin: 0 auto 30px;
+    }
+
+    .title {
+        font-size: 50px;
+    }
+
+    .copy {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .nav__container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .nav__hero {
+        height: auto;
+    }
+
+    .logo {
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    .links {
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    .link {
+        padding: 7px 10px;
+    }
+
+    .hero__main {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        height: auto;
+        padding: 30px 0;
+        text-align: center;
+    }
+
+    .hero__textos {
+        width: 100%;
+    }
+
+    .mockup {
+        width: 70%;
+        margin-bottom: 20px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .copy {
+        font-size: 14px;
+    }
+
+    .subtitle {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .copy__section {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .botonesTienda {
+        flex-direction: row;
+        align-items: center;
+    }
+    .botonTienda img {
+        width: 50px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .mockup {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .copy {
+        font-size: 16px;
+    }
+
+    .botonesTienda {
+        flex-direction: row;
+        align-items: center;
+    }
+    .botonTienda img {
+        width: 150px;
+    }
+}
